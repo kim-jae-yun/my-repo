@@ -17,6 +17,7 @@ git commit -m "Message 2"  : "Message 2"로 커밋 실행,
 
 git --help          : git commands 도움말
 git log --stat      : 수정내 내역 확인 
+git diff            : 차이
 
 dir // ls // cd .. // cd / : 메인으로 // m
 
@@ -30,6 +31,17 @@ git commit -am "Message 3" : add와 commit을 동시에 실행
 
 git reset --hard 8ed831b5941bf474ca6cc2564466795ae9adea6b  
 * : 이전 버전으로 되돌아 감(기존 추가 버전 삭제)
+
+git log -p : 변화된 내역을 보여줌
+
+git revert 96c5ca6c45a29a9ec71add894728ded196ab4fb1
+* 이전 버전으로 되돌려 줌(반드시 순차적 역순으로 revert 해야함)
+
+* diff tool : 인터넷 검색하여 다양한 도구들 활용
+* .gitignore : 버전관리 하지 말아야 할 파일을 만들고 거기에 파일 이름을 적으면 됨 
+* branch : 저장소를 여러가지 상태로 공존할 수 있게 함(여러회사 등에 일부의 내용을 수정해서 보급하려할 때)
+* tag : commit id(버전식별자로 사용) 대신에 사용 
+* backup
 
 
 commit b3da2e7ff58d17c0653659ce53f9e6906d656e00 (HEAD -> master)
