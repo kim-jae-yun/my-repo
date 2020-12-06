@@ -1,2 +1,57 @@
-hello world 1
-hello world kim 2
+PS E:\Python\PyQt강의> ls  : 검색
+mkdir hello-git-cli : 폴더를 새로 만듬
+cd .\hello-git-cli\ : 폴더로 이동
+git init            : 현재 폴더를 git에 commit함
+cat hello.txt       : hello.txt을 만들고 만들어진 hello.txt 파일의 내용을 출력
+git status          : 해당 폴더의 상태확인
+git log             : 버전관리 확인 내역 확인
+mv hello.txt hello1.txt  : mv hello.txt 파일을 hello1.txx 파일로 변경
+git add hello1.txt  : hello1.txt 파일을 git에 추가
+git commit -m "Message 1"  : Message 1으로 커밋 실행
+git log  
+git status
+git add hello1.txt  : hello1.txt 파일을 git에 추가
+git add hello2.txt  : hello2.txt 파일을 git에 추가
+git commit -m "Message 2"  : "Message 2"로 커밋 실행, 
+* -m : command 라인에서 직접 커밋 메시지를 입력할 때 사용
+
+git --help          : git commands 도움말
+git log --stat      : 수정내 내역 확인 
+
+dir // ls // cd .. // cd / : 메인으로 // m
+
+git log 실행하여 버전을 확인후 각 버전으로 검색 가능
+git checkout 8ed831b5941bf474ca6cc2564466795ae9adea6b  : 이전 버전으로 검색
+git checkout master   : 원래의 master 버전으로 되돌아 감
+* 아래 각각의 버전 참조
+
+git commit -am "Message 3" : add와 commit을 동시에 실행 
+* 각 파일 모두 최초 한번씩은 add 파일이 실행되어야 함(Untracked files이 있으면 실행 안됨)
+
+git reset --hard 8ed831b5941bf474ca6cc2564466795ae9adea6b  
+* : 이전 버전으로 되돌아 감(기존 추가 버전 삭제)
+
+
+commit b3da2e7ff58d17c0653659ce53f9e6906d656e00 (HEAD -> master)
+Author: kim-jae-yun <svastica@naver.com>
+Date:   Sun Dec 6 17:09:21 2020 +0900
+
+    Message 4
+
+commit 5be425ee5759ba447540be08a1fd0144786ab8c0
+Author: kim-jae-yun <svastica@naver.com>
+Date:   Sun Dec 6 16:59:49 2020 +0900
+
+    Messgat 3
+
+commit 78a5f46b8c6dec155a780dde9173de07eee96752
+Author: kim-jae-yun <svastica@naver.com>
+Date:   Sun Dec 6 16:52:30 2020 +0900
+
+    Message 3
+
+commit 8ed831b5941bf474ca6cc2564466795ae9adea6b
+Author: kim-jae-yun <svastica@naver.com>
+Date:   Sun Dec 6 16:40:40 2020 +0900
+
+    Message 2
